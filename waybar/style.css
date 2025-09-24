@@ -12,12 +12,23 @@
   border: none;
   box-shadow: none;
 }
+#applications {
+  background-color: rgba(70, 70, 70, 0.4); /* same as other modules */
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: #ffffff; /* force white text */
+}
+#applications:hover {
+  background-color: rgba(100, 100, 100, 0.3);
+}
 
 /* Unified style for all modules */
 #workspaces,
 #window,
 #tray {
-  background-color: rgba(70, 70, 70, 0.3); /* More transparent grey */
+  background-color: rgba(70, 70, 70, 0.4); /* More transparent grey */
   padding: 4px 6px; 
   margin-top: 6px; 
   margin-left: 6px; 
@@ -28,7 +39,7 @@
 
 #clock,
 #custom-power {
-  background-color: rgba(70, 70, 70, 0.3);
+  background-color: rgba(70, 70, 70, 0.4);
   margin-top: 6px; 
   margin-right: 6px;
   padding: 4px 2px; 
@@ -38,7 +49,7 @@
 
 #network,
 #custom-lock {
-  background-color: rgba(70, 70, 70, 0.3);
+  background-color: rgba(70, 70, 70, 0.4);
   margin-top: 6px; 
   margin-left: 6px;
   padding: 4px 2px; 
@@ -54,7 +65,7 @@
 #custom-temperature,
 #memory,
 #cpu {
-  background-color: rgba(70, 70, 70, 0.3);
+  background-color: rgba(70, 70, 70, 0.4);
   margin-top: 6px;
   padding: 4px 2px; 
   border-width: 0px;
@@ -80,7 +91,7 @@
 #custom-reboot:hover,
 #custom-power:hover,
 #window:hover {
-  background-color: rgba(100, 100, 100, 0.4); /* Slightly darker hover */
+  background-color: rgba(100, 100, 100, 0.3); /* Slightly darker hover */
 }
 
 /* Workspace active state highlight */
