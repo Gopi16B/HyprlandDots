@@ -12,7 +12,7 @@
     "hyprland/window",
     "applications"
   ],
-  "modules-center": ["hyprland/workspaces"],
+
   "modules-right": [
     "network",
     "battery",

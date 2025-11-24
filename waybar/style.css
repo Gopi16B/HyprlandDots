@@ -3,56 +3,57 @@
   font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
   font-weight: bold;
   font-size: 16px;
-  color: #dcdfe1; /* Default text color */
+  color: #dcdfe1;
 }
 
 /* Waybar background fully transparent */
 #waybar {
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   box-shadow: none;
 }
+
 #applications {
-  background-color: rgba(70, 70, 70, 0.4); /* same as other modules */
+  background-color: rgba(220, 220, 220, 0.01);
   margin-top: 6px;
   margin-left: 6px;
   padding: 4px 6px;
   border-radius: 10px;
-  color: #ffffff; /* force white text */
+  color: #ffffff;
 }
 #applications:hover {
-  background-color: rgba(100, 100, 100, 0.3);
+  background-color: rgba(255, 255, 255, 0.01);
 }
 
 /* Unified style for all modules */
 #workspaces,
 #window,
 #tray {
-  background-color: rgba(70, 70, 70, 0.4); /* More transparent grey */
-  padding: 4px 6px; 
-  margin-top: 6px; 
-  margin-left: 6px; 
-  margin-right: 6px; 
+  background-color: rgba(220, 220, 220, 0.01);
+  padding: 4px 6px;
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
   border-radius: 10px;
   border-width: 0px;
 }
 
 #clock,
 #custom-power {
-  background-color: rgba(70, 70, 70, 0.4);
-  margin-top: 6px; 
+  background-color: rgba(220, 220, 220, 0.01);
+  margin-top: 6px;
   margin-right: 6px;
-  padding: 4px 2px; 
+  padding: 4px 2px;
   border-radius: 0 10px 10px 0;
   border-width: 0px;
 }
 
 #network,
 #custom-lock {
-  background-color: rgba(70, 70, 70, 0.4);
-  margin-top: 6px; 
+  background-color: rgba(220, 220, 220, 0.01);
+  margin-top: 6px;
   margin-left: 6px;
-  padding: 4px 2px; 
+  padding: 4px 2px;
   border-radius: 10px 0 0 10px;
   border-width: 0px;
 }
@@ -65,19 +66,18 @@
 #custom-temperature,
 #memory,
 #cpu {
-  background-color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(220, 220, 220, 0.01);
   margin-top: 6px;
-  padding: 4px 2px; 
+  padding: 4px 2px;
   border-width: 0px;
 }
 
 #custom-temperature.critical,
 #pulseaudio.muted {
-  color: #FF0000; /* Red for critical/muted */
+  color: #FF0000;
   padding-top: 0;
 }
 
-/* Hover effect: slightly darker on hover */
 #bluetooth:hover,
 #network:hover,
 #backlight:hover,
@@ -91,30 +91,29 @@
 #custom-reboot:hover,
 #custom-power:hover,
 #window:hover {
-  background-color: rgba(100, 100, 100, 0.3); /* Slightly darker hover */
+  background-color: rgba(255, 255, 255, 0.01);
 }
 
-/* Workspace active state highlight */
+/* Workspace hover */
 #workspaces button:hover {
-  background-color: rgba(97, 175, 239, 0.2); /* Light blue hover */
+  background-color: rgba(255, 255, 255, 0.01);
   padding: 2px 8px;
   margin: 0 2px;
   border-radius: 10px;
 }
 
 #workspaces button.active {
-  background-color: #61afef; /* Blue highlight */
+  background-color: #61afef;
   color: #ffffff;
   padding: 2px 8px;
   margin: 0 2px;
   border-radius: 10px;
 }
 
-/* Inactive workspace buttons */
 #workspaces button {
   background: transparent;
   border: none;
-  color: #888888; /* Grey text for inactive */
+  color: #888888;
   padding: 2px 8px;
   margin: 0 2px;
   font-weight: bold;

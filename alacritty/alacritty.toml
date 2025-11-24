@@ -1,0 +1,15 @@
+
+
+[terminal.shell]
+program = "/bin/bash"
+
+[general]
+import = ["~/.cache/wal/colors-alacritty.toml"]
+
+
+
+[window]
+blur = true
+opacity = 0.9
+
+[terminal]
