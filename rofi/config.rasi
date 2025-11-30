@@ -13,4 +13,4 @@ configuration{
 
 
 
-@theme "/home/dibash/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/theme.rasi"
