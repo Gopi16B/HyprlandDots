@@ -13,4 +13,3 @@ fi
 swww img "$WALLPAPER" --transition-type=outer --transition-duration=1.5
 
 wal -n -i "$WALLPAPER"
-
