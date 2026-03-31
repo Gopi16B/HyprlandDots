@@ -1,0 +1,11 @@
+Additional arch rice shits
+
+Firstly install zsh and change the base terminal to zsh 
+chsh -s $(which zsh)
+and logout completely 
+
+secondly install starship 
+and put these in your .zshrc file
+eval "$(starship init zsh)"
+fastfetch -l arch
+
