@@ -13,7 +13,8 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(filemanager))
 hl.bind("ALT + S", hl.dsp.exec_cmd("hyprshot -m region"))
-hl.bind(mainMod.. "+ W", hl.dsp.exec_cmd("/home/dibas/.config/hypr/changewall1.sh"))
+hl.bind(mainMod.. "+ W", hl.dsp.exec_cmd("/home/dibas/.config/rofi/wallpaper.sh"))
+hl.bind(mainMod.. "+ R", hl.dsp.exec_cmd("/home/dibas/.config/hypr/changewall1.sh"))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 
 for i = 1, 9 do 

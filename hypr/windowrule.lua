@@ -46,3 +46,8 @@ hl.window_rule({
 
 
 
+hl.layer_rule({
+    name  = "wallpaper-picker-blur",
+    match = { namespace = "wallpaper-picker" },
+    blur  = true,
+})

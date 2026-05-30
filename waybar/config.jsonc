@@ -1,18 +1,13 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 20,
+  "height": 12,
   "spacing": 0,
   "modules-left": [
-    
     "tray",
-    "custom/lock",
-    "custom/reboot",
-    "custom/power",
     "hyprland/window",
     "applications"
   ],
-
   "modules-right": [
     "battery",
     "pulseaudio",
@@ -24,139 +19,99 @@
   ],
 
   "applications": {
-  "format": "Apps",
-  "on-click": "~/.config/waybar/applauncher.sh",
-  "tooltip": false,
+    "format": "<span color='#FFFFFF'> Apps</span>",
+    "on-click": "~/.config/waybar/applauncher.sh",
+    "tooltip": false
   },
 
-  "hyprland/workspaces": {
-    "disable-scroll": false,
-    "all-outputs": true,
-    "format": "{icon}",
-    "on-click": "activate",
-    "persistent-workspaces": {
-      "*":[1,2,3]
-    },
-    "format-icons": {
-      "1": "●",
-      "2": "●",
-      "3": "●",
-      "4": "●",
-      "5": "●",
-      "6": "●",
-      "7": "●",
-      "8": "●",
-      "9": "●",
-      "default": "●"
-    }
-    
-  },
   "custom/lock": {
-    "format": "<span color='#FFFFFFBC'>  </span>",
+    "format": "<span color='#FFFFFF'>  </span>",
     "on-click": "hyprlock",
     "tooltip": true,
     "tooltip-format": "Lock Screen"
   },
   "custom/reboot": {
-    "format": "<span color='#FFFFFFBC'>  </span>",
+    "format": "<span color='#FFFFFF'>  </span>",
     "on-click": "systemctl reboot",
     "tooltip": true,
     "tooltip-format": "Reboot"
   },
   "custom/power": {
-    "format": "<span color='#FFFFFFBC'>  </span>",
+    "format": "<span color='#FFFFFF'>  </span>",
     "on-click": "systemctl poweroff",
     "tooltip": true,
     "tooltip-format": "Power Off"
   },
+
   "network": {
-    "format-wifi": "<span color='#FFFFFFBC'> 󰤨 </span>{essid} ",
-    "format-ethernet": "<span color='#FFFFFFBC'> </span>Wired ",
-    "tooltip-format": "<span color='#FFFFFFBC'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
-    "format-linked": "<span color='#FFFFFFBC'> 󱘖 </span>{ifname} (No IP) ",
-    "format-disconnected": "<span color='#FFFFFFBC'>  </span>Disconnected ",
-    "format-alt": "<span color='#FFFFFFBC'> 󰤨 </span>{signalStrength}% ",
+    "format-wifi": "<span color='#FFFFFF'>  </span> {essid} ",
+    "format-ethernet": "<span color='#FFFFFF'>  </span> Wired ",
+    "format-disconnected": "<span color='#FFFFFF'>  </span> Disconnected ",
     "interval": 1,
     "on-click": "nm-connection-editor"
   },
 
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span color='#FFFFFFBC'> {icon} </span>{capacity}% ",
-    "format-charging": " 󱐋{capacity}%",
-    "interval": 1,
-    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+ "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "format": "<span color='#FFFFFF'>  </span> {capacity}%",
+    "format-charging": "<span color='#FFFFFF'> </span> {capacity}%",
+    "interval": 5,
     "tooltip": true
   },
+
   "pulseaudio": {
-    "format": "<span color='#FFFFFFBC'>{icon}</span>{volume}% ",
-    "format-muted": "<span color='#FFFFFFBC'> 󰖁 </span>0% ",
-    "format-icons": {
-      "headphone": "<span color='#FFFFFFBC'>  </span>",
-      "hands-free": "<span color='#FFFFFFBC'>  </span>",
-      "headset": "<span color='#FFFFFFBC'>  </span>",
-      "phone": "<span color='#FFFFFFBC'>  </span>",
-      "portable": "<span color='#FFFFFFBC'>  </span>",
-      "car": "<span color='#FFFFFFBC'>  </span>",
-      "default": [
-        "<span color='#FFFFFFBC'>  </span>",
-        "<span color='#FFFFFFBC'>  </span>",
-        "<span color='#FFFFFFBC'>  </span>"
-      ]
-    },
+    "format": "<span color='#FFFFFF'>  </span> {volume}%",
+    "format-muted": "<span color='#FFFFFF'>  </span> 0%",
     "on-click-right": "pavucontrol",
     "tooltip": true,
     "tooltip-format": "Current System Volume: {volume}%"
   },
+
   "custom/temperature": {
     "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
-    "format": "<span color='#FFFFFFBC'> </span>{}°C ",
+    "format": "<span color='#FFFFFF'> </span> {}°C",
     "interval": 5,
     "tooltip": true,
-    "tooltip-format": "Current CPU Temperature: {}°C"
+    "tooltip-format": "CPU Temperature: {}°C"
   },
+
   "memory": {
-    "format": "<span color='#FFFFFF'>  </span>{used:0.1f}G/{total:0.1f}G ",
+    "format": "<span color='#FFFFFF'>  </span> {used:0.1f}G/{total:0.1f}G",
     "tooltip": true,
-    "tooltip-format": "Current Memory Usage: {used:0.2f}G/{total:0.2f}G"
+    "tooltip-format": "Memory Usage: {used:0.2f}G/{total:0.2f}G"
   },
+
   "cpu": {
-    "format": "<span color='#FFFFFF'>  </span>{usage}% ",
+    "format": "<span color='#FFFFFF'>  </span> {usage}%",
     "tooltip": true
   },
+
   "clock": {
     "interval": 1,
-    "timezone": "Asia/Chengdu",
-    "format": "<span color='#FFFFFF'>  </span>{:%H:%M} ",
+    "timezone": "Asia/Kathmandu",
+    "format": "<span color='#FFFFFF'>  </span> {:%H:%M}",
     "tooltip": true,
     "tooltip-format": "{:L%Y Year %m Month %d Day, %A}"
   },
+
   "tray": {
     "icon-size": 17,
     "spacing": 6
   },
+
   "backlight": {
     "device": "intel_backlight",
-    "format": "<span color='#FFFFFF'>{icon}</span>{percent}% ",
+    "format": "<span color='#FFFFFF'></span> {percent}%",
     "tooltip": true,
-    "tooltip-format": "Current Screen Brightness: {percent}%",
-    "format-icons": [
-      "<span color='#FFFFFFBC'> 󰃞 </span>",  // Dark - Dark Gray
-      "<span color='#FFFFFFBC'> 󰃝 </span>",  // Medium - Gray
-      "<span color='#FFFFFFBC'> 󰃟 </span>",  // Bright - Lemon Yellow
-      "<span color='#FFFFFFBC'> 󰃠 </span>"   // Brightest - Gold
-    ]
+    "tooltip-format": "Brightness: {percent}%"
   },
+
   "bluetooth": {
-    "format": "<span color='#00BFFF'>  </span>{status} ",
-    "format-connected": "<span color='#00BFFF'>  </span>{device_alias} ",
-    "format-connected-battery": "<span color='#00BFFF'>  </span>{device_alias}{device_battery_percentage}% ",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    "format": "<span color='#FFFFFF'></span> {status}",
+    "format-connected": "<span color='#FFFFFF'></span> {device_alias}",
+    "format-connected-battery": "<span color='#FFFFFF'></span> {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected"
   }
 }
+
