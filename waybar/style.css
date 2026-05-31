@@ -12,35 +12,16 @@
   border: none;
   box-shadow: none;
 }
-
-#applications {
-  background-color: mix(@color0, #1a1a1a, 0.2);
-  margin-top: 5px;
-  margin-left: 6px;
-  padding: 3px 6px;
-  border-radius: 10px;
-  color: mix(white, @color4, 0.25);
-}
-
-#applications:hover {
-  background-color: mix(@color0, #1a1a1a, 0.2);
-  color: mix(white, @color4, 0.25);
-}
-
-#workspaces,
-#window,
+#window, 
 #tray,
 #clock,
-#custom-power,
-#network,
-#custom-lock,
-#custom-reboot,
-#bluetooth,
-#battery,
 #pulseaudio,
+#mpris,
 #backlight,
 #custom-temperature,
 #memory,
+#tooltip,
+#custom-lock,
 #cpu {
   background-color: mix(@color0, #1a1a1a, 0.2);
   border: none;
@@ -52,65 +33,25 @@
   color: mix(white, @color4, 0.25);
 }
 
-#custom-temperature.critical,
-#pulseaudio.muted {
-  color: @color1;
-  padding-top: 0;
+tooltip{
+    background-color: mix(@color0, #1a1a1a, 0.2);
+    border: none;
+    border-radius: 10px;
+    padding: 3px 6px;
+    color: mix(white, @color4, 0.25);
 }
 
-#bluetooth:hover,
-#network:hover,
-#backlight:hover,
-#battery:hover,
-#pulseaudio:hover,
-#custom-temperature:hover,
-#memory:hover,
-#cpu:hover,
-#clock:hover,
-#custom-lock:hover,
-#custom-reboot:hover,
-#custom-power:hover,
-#window:hover {
-  background-color: mix(@color0, #1a1a1a, 0.2);
-  color: mix(white, @color4, 0.25);
+tooltip label {
+    color: mix(white, @color4, 0.25);
+}
+#custom-lock {
+	background-color: mix(@color0, #1a1a1a, 0.2);
+	border: none;
+	padding: 4px 6px;
+	margin-top: 5px;
+	margin-left: 6px;
+	margin-right: 6px;
+	border-radius: 10px;
+	color: mix(white, @color4, 0.25);
 }
 
-#workspaces button {
-  background: transparent;
-  border: none;
-  color: alpha(white, 0.35);
-  padding: 2px 8px;
-  margin: 0 2px;
-  font-weight: bold;
-}
-
-#workspaces button:hover {
-  background: transparent;
-  color: white;
-}
-
-#workspaces button.active {
-  background-color: alpha(@color4, 0.25);
-  color: mix(white, @color4, 0.3);
-  padding: 2px 8px;
-  margin: 0 2px;
-  border-radius: 10px;
-}
-
-#window {
-  font-weight: 500;
-  font-style: italic;
-  color: mix(white, @color4, 0.25);
-}
-
-#battery.charging {
-  color: @color2;
-}
-
-#battery.critical:not(.charging) {
-  color: @color1;
-}
-
-#pulseaudio.muted {
-  color: alpha(white, 0.3);
-}
