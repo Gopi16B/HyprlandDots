@@ -1,0 +1,36 @@
+[lua]
+disabled = true
+
+
+lscan_timeout = 100
+command_timeout = 500
+
+
+
+format = """
+$directory$git_branch$git_status$cmd_duration
+$character"""
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+
+[battery]
+disabled = true

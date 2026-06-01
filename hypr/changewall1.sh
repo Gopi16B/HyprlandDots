@@ -8,3 +8,4 @@ awww img "$WALLPAPER" --transition-type=wipe --transition-duration=1.3
 
 # Apply pywal colors
 wal -n -i "$WALLPAPER"
+.config/mako/makopywall.sh
