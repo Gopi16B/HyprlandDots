@@ -14,14 +14,14 @@ require("input")
 
 hl.monitor({
 	output = "eDP-1",
-	mode="1920x1080@60",
-	position="-1920x0",
+	mode = "1920x1080@60",
+	position = "-1920x0",
 	scale = 1,
 })
 hl.monitor({
 	output = "HDMI-A-2",
-	mode="1920x1080@60",
-	position="0x0",
+	mode = "1920x1080@60",
+	position = "1x0", -- Shifted 1px right to stop accidental cursor rollover
 	scale = 1,
 })
 
@@ -42,6 +42,5 @@ hl.on("hyprland.start",function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("/home/dibas/.config/hypr/changewall1.sh")
 end)
-
 
 

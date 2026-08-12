@@ -51,3 +51,13 @@ hl.layer_rule({
     match = { namespace = "wallpaper-picker" },
     blur  = true,
 })
+hl.cursor = {
+    -- Prevents the cursor from warping away unexpectedly
+    no_cursor_warps = true,
+    
+    -- Disables hardware cursors if encountering desynchronization/drift
+    no_hardware_cursors = true,
+    
+    -- Prevents mouse inputs from leaking across active boundaries
+    inactive_timeout = 0
+}

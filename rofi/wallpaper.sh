@@ -105,3 +105,6 @@ if [ -n "$SELECTED" ]; then
     wal -i "$WALL_DIR/$SELECTED" -n -q
     ~/.config/mako/makopywall.sh
 fi
+if ! pidof waybar >/dev/null; then
+    waybar &
+fi

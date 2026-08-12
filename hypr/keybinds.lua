@@ -17,6 +17,7 @@ hl.bind(mainMod.. "+ W", hl.dsp.exec_cmd("/home/dibas/.config/rofi/wallpaper.sh"
 hl.bind(mainMod.. "+ R", hl.dsp.exec_cmd("/home/dibas/.config/hypr/changewall1.sh"))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 for i = 1, 9 do 
     hl.bind(mainMod .. "+" .. i , hl.dsp.focus({workspace = i}))
     hl.bind(mainMod .. "+SHIFT+" .. i , hl.dsp.window.move({workspace = i}))
@@ -37,4 +38,4 @@ hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_S
 hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
 
-
+hl.bind(mainMod .. "+p", hl.dsp.exec_cmd("hyprctl dispatch dpms off eDP-1"))
